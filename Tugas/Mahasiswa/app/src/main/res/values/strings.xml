@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Masjid.in</string>
+    <string name="identitas">Identitas</string>
+    <string name="jadwal">Jadwal</string>
+    <string name="marquee">Marquee</string>
+    <string name="pengumuman">Pengumuman</string>
+    <string name="slideshow">Slideshow</string>
+    <string name="tagline">Tagline</string>
+</resources>
