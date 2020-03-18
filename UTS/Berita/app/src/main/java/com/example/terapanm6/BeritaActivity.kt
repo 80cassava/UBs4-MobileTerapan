@@ -21,10 +21,10 @@ class BeritaActivity : AppCompatActivity() {
         setContentView(R.layout.activity_berita)
 
         btn_save.setOnClickListener {
-            val nama = editTextJudul.text.toString()
-            val nomor = editTextWaktu.text.toString()
-            val alamat = editTextPenulis.text.toString()
-            postServer(nama, nomor, alamat)
+            val judul = editTextJudul.text.toString()
+            val waktu = editTextWaktu.text.toString()
+            val penulis = editTextPenulis.text.toString()
+            postServer(judul, waktu, penulis)
             startActivity(Intent(this, DashboardActivity::class.java))
         }
     }
