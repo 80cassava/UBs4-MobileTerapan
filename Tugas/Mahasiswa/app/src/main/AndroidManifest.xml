@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.terapanm4">
+    package="com.example.terapanm6">
 
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
@@ -11,25 +11,10 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/AppTheme.NoActionBar"
+        android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">
-        <activity android:name=".TaglineActivity"
-            android:label="@string/tagline"/>
-        <activity
-            android:name=".SlideshowActivity"
-            android:label="@string/slideshow" />
-        <activity
-            android:name=".PengumumanActivity"
-            android:label="@string/pengumuman" />
-        <activity
-            android:name=".MarqueeActivity"
-            android:label="@string/marquee" />
-        <activity
-            android:name=".IdentitasActivity"
-            android:label="@string/identitas" />
-        <activity
-            android:name=".JadwalActivity"
-            android:label="@string/jadwal" />
+        <activity android:name=".MahasiswaActivity"></activity>
+        <activity android:name=".DashboardActivity" />
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
