@@ -24,16 +24,18 @@ class BeritaActivity : AppCompatActivity() {
             val nama = editTextJudul.text.toString()
             val nomor = editTextWaktu.text.toString()
             val alamat = editTextPenulis.text.toString()
-            postServer(nama, nomor, alamat)
+            val isi = editTextIsi.text.toString()
+            postServer(nama, nomor, alamat, isi)
             startActivity(Intent(this, DashboardActivity::class.java))
         }
     }
 
-    fun postServer(data1: String, data2: String, data3: String) {
+    fun postServer(data1: String, data2: String, data3: String, data4: String) {
         AndroidNetworking.post("http://$ip/mobter/berita/berita_create.php")
             .addBodyParameter("judul_berita", data1)
             .addBodyParameter("waktu_berita", data2)
             .addBodyParameter("penulis_berita", data3)
+            .addBodyParameter("isi_berita", data4)
             .setPriority(Priority.MEDIUM).build()
             .getAsJSONArray(object : JSONArrayRequestListener {
                 override fun onResponse(response: JSONArray) {

@@ -54,7 +54,8 @@ class DashboardActivity : AppCompatActivity() {
                         var isi1 = jsonObject.optString("judul_berita").toString()
                         var isi2 = jsonObject.optString("waktu_berita").toString()
                         var isi3 = jsonObject.optString("penulis_berita").toString()
-                        slides.add(Berita("$isi1", "$isi2", "$isi3"))
+                        var isi4 = jsonObject.optString("isi_berita").toString()
+                        slides.add(Berita("$isi1", "$isi2", "$isi3", "$isi4"))
                     }
                     val adapter = BeritaAdapter(slides)
                     recyclerView.adapter = adapter
