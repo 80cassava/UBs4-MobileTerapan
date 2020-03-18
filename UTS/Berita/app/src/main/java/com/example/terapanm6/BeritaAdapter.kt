@@ -10,9 +10,9 @@ class BeritaAdapter(val slideList: ArrayList<Berita>):
     RecyclerView.Adapter<BeritaAdapter.ViewHolder>(){
         override fun onBindViewHolder(holder: ViewHolder, position: Int) {
             val user: Berita = slideList[position]
-            holder.textViewJudul.text = user.judul
-            holder.textViewWaktu.text = user.waktu
-            holder.textViewPenulis.text = user.penulis
+            holder.textViewName.text = user.judul
+            holder.textViewNumber.text = user.waktu
+            holder.textViewAddress.text = user.penulis
         }
 
         override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
@@ -25,8 +25,8 @@ class BeritaAdapter(val slideList: ArrayList<Berita>):
         }
 
         class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
-            val textViewJudul = itemView.findViewById(R.id.textViewJudul) as TextView
-            val textViewWaktu = itemView.findViewById(R.id.textViewWaktu) as TextView
-            val textViewPenulis = itemView.findViewById(R.id.textViewPenulis) as TextView
+            val textViewName = itemView.findViewById(R.id.textViewName) as TextView
+            val textViewNumber = itemView.findViewById(R.id.textViewNumber) as TextView
+            val textViewAddress = itemView.findViewById(R.id.textViewAddress) as TextView
         }
 }
