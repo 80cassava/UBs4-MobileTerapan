@@ -13,6 +13,7 @@ class BeritaAdapter(val slideList: ArrayList<Berita>):
             holder.textViewName.text = user.judul
             holder.textViewNumber.text = user.waktu
             holder.textViewAddress.text = user.penulis
+            holder.textViewIsi.text = user.isi
         }
 
         override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
@@ -28,5 +29,6 @@ class BeritaAdapter(val slideList: ArrayList<Berita>):
             val textViewName = itemView.findViewById(R.id.textViewName) as TextView
             val textViewNumber = itemView.findViewById(R.id.textViewNumber) as TextView
             val textViewAddress = itemView.findViewById(R.id.textViewAddress) as TextView
+            val textViewIsi = itemView.findViewById(R.id.textViewIsi) as TextView
         }
 }

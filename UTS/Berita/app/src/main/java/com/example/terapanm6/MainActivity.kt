@@ -4,7 +4,6 @@ import android.content.Context
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.renderscript.RenderScript
 import android.util.Log
 import com.androidnetworking.AndroidNetworking
 import com.androidnetworking.common.Priority
@@ -13,7 +12,7 @@ import com.androidnetworking.interfaces.JSONObjectRequestListener
 import kotlinx.android.synthetic.main.activity_main.*
 import org.json.JSONObject
 
-val ip = "192.168.1.8"
+val ip = "192.168.100.159"
 
 class MainActivity : AppCompatActivity() {
 
@@ -41,7 +40,6 @@ class MainActivity : AppCompatActivity() {
             .setPriority(Priority.MEDIUM).build()
             .getAsJSONObject(object : JSONObjectRequestListener {
                 override fun onResponse(response: JSONObject) {
-
                     val jsonArray = response.getJSONArray("result")
                     for (i in 0 until jsonArray.length()) {
                         val jsonObject = jsonArray.getJSONObject(i)
